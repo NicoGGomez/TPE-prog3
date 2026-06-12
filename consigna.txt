@@ -1,4 +1,0 @@
-Contexto 
-El trabajo práctico de cursada propone resolver distintos problemas asociados a un contexto simplificado de paquetes y camiones de reparto. En una primera etapa se deberán resolver servicios simples de búsqueda y consulta sobre los paquetes, mientras que en la segunda etapa el objetivo estará centrado en resolver la asignación de paquetes a camiones, utilizando distintas técnicas algorítmicas. 
-Para ambas etapas el conjunto de datos de entrada estará dado por 2 archivos de 
-texto con un formato predefinido, que se menciona a continuación.
