@@ -8,14 +8,28 @@ public class Solucion {
 
     private HashMap<Camion, ArrayList<Paquete>> asignaciones;
     private int pesoNoAsignado;
+    private int estadosGenerados;
 
     public Solucion() {
         this.asignaciones = new HashMap<>();
         this.pesoNoAsignado = Integer.MAX_VALUE;
+        this.estadosGenerados = 0; 
+    }
+
+    public int getEstadosGenerados() {
+        return estadosGenerados;
+    }
+
+    public void setEstadosGenerados(int estadosGenerados) {
+        this.estadosGenerados = estadosGenerados;
     }
 
     public HashMap<Camion, ArrayList<Paquete>> getAsignaciones() {
         return asignaciones;
+    }
+
+    public void setAsignaciones(HashMap<Camion, ArrayList<Paquete>> asignaciones) {
+        this.asignaciones = asignaciones;
     }
 
     public int getPesoNoAsignado() {
@@ -28,7 +42,20 @@ public class Solucion {
 
     @Override
     public String toString() {
-        return "Solución obtenida: cada camión con los paquetes asignados. Peso no asignado: " + this.getPesoNoAsignado() + " kg. Métrica para analizar el costo de la solución (cantidad de estados generados).";
+
+        String resultado = "Solución obtenida:\n";
+
+        for (Camion c : asignaciones.keySet()) {
+            resultado += c + " -> " + asignaciones.get(c) + "\n";
+        }
+
+        resultado += "\nPeso no asignado: "
+                + pesoNoAsignado + " kg";
+
+        resultado += "\nCantidad de estados generados: "
+                + estadosGenerados;
+
+        return resultado;
     }
 
 }

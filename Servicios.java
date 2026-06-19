@@ -52,6 +52,14 @@ public class Servicios {
         return resultado;
     }
 
+    public ArrayList<Camion> getCamiones() {
+        return new ArrayList<>(camiones.values());
+    }
+
+    public ArrayList<Paquete> getPaquetes() {
+        return new ArrayList<>(paquetes.values());
+    }
+
     private void cargarInformacion(String pathCamion, String pathPaquetes){
         cargarPaquete(pathPaquetes);
         cargarCamiones(pathCamion);

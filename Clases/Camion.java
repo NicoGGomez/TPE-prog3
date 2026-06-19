@@ -45,4 +45,28 @@ public class Camion {
         this.refrigerado = refrigerado;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+
+        if (this == obj)
+            return true;
+
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+
+        Camion otro = (Camion) obj;
+
+        return patente.equals(otro.patente);
+    }
+
+    @Override
+    public int hashCode() {
+        return patente.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return patente + " (" + capacidadKg + "kg)";
+    }
+
 }
