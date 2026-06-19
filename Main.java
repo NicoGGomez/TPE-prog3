@@ -13,11 +13,11 @@ public class Main {
 
         Servicios s = new Servicios("csv/Camiones.csv", "csv/Paquetes.csv");
 
-        System.out.println("1.1. " + s.servicio1("P001") + "\n");
+        System.out.println("1.1. paquete asociado: " + s.servicio1("P001") + "\n");
 
-        System.out.println("1.2. " + s.servicio2(true) + "\n");
+        System.out.println("1.2. lista: " + s.servicio2(true) + "\n");
 
-        System.out.println("1.3. " + s.servicio3(50,100) + "\n");
+        System.out.println("1.3. lista: " + s.servicio3(50,100) + "\n");
 
         // PARTE 2 
 
