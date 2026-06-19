@@ -9,24 +9,24 @@ Se implementan algoritmos de búsqueda como Backtracking y posibles heurísticas
 TPE-prog3/<br>
 │<br>
 ├── src/<br>
-│   ├── modelo/<br>
-│   │    ├── Camion.java<br>
-│   │    ├── Paquete.java<br>
-│   │<br>
-│   ├── algoritmos/<br>
-│   │    ├── Backtracking.java<br>
-│   │<br>
-│   ├── solucion/<br>
-│   │    ├── Solucion.java<br>
-│   │<br>
-│   ├── servicios/<br>
-│   │    ├── Servicios.java<br>
-│   │<br>
-│   └── main/<br>
-│        ├── Main.java<br>
+│     ├── modelo/<br>
+│     │      ├── Camion.java<br>
+│     │      ├── Paquete.java<br>
+│     │<br>
+│     ├── algoritmos/<br>
+│     │      ├── Backtracking.java<br>
+│     │<br>
+│     ├── solucion/<br>
+│     │      ├── Solucion.java<br>
+│     │<br>
+│     ├── servicios/<br>
+│            ├── Servicios.java<br>
 │<br>
-├── data/<br>
-│   ├── csv/<br>
+├── Main.java<br>
+│<br>
+├── csv/<br>
+│     ├── Camiones.csv/<br>
+|     ├── Paquetes.csv/<br>
 │<br>
 ├── README.md<br>
 <br>
