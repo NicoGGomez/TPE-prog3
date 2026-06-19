@@ -1,8 +1,15 @@
+import src.algoritmos.Backtracking;
+import src.algoritmos.Greedy;
+import src.servicios.Servicios;
+import src.solucion.Solucion;
+
 public class Main {
     
     public static void main(String[] args) {
         
         // PARTE 1 
+
+        System.out.println("\n===== PARTE 1 =====");
 
         Servicios s = new Servicios("csv/Camiones.csv", "csv/Paquetes.csv");
 
@@ -14,11 +21,23 @@ public class Main {
 
         // PARTE 2 
 
+        System.out.println("\n===== PARTE 2 =====");
+
+        System.out.println("\n===== BACKTRACKING =====");
+
         Backtracking bt = new Backtracking(s.getCamiones(), s.getPaquetes());
 
-        Solucion solucion = bt.resolver();
+        Solucion solucionBacktracking = bt.resolver();
 
-        System.out.println("2.1 " + solucion);
+        System.out.println("2.1 " + solucionBacktracking);
+
+        System.out.println("\n===== GREEDY =====");
+
+        Greedy greedy = new Greedy(s.getCamiones(), s.getPaquetes());
+
+        Solucion solucionGreedy = greedy.resolver();
+
+        System.out.println("2.2 " + solucionGreedy);
 
     }
 

@@ -1,4 +1,4 @@
-package Clases;
+package src.Clases;
 
 public class Paquete {
     private int id;

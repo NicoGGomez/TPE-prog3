@@ -1,8 +1,25 @@
+package src.algoritmos;
+
+/*
+ 
+Explicacion de estrategia:
+
+El algoritmo utiliza backtracking para explorar todas las posibles asignaciones de paquetes a camiones y quedarse con la mejor solución.
+
+Recorre los paquetes uno por uno y, para cada uno, prueba dos opciones: asignarlo a algún camión válido (respetando capacidad y refrigeración) o no asignarlo. En cada paso se genera un nuevo estado del problema.
+
+Si la solución parcial ya tiene un peso no asignado mayor o igual al de la mejor solución encontrada, se podan ramas para optimizar la búsqueda. Al llegar al final de los paquetes, se actualiza la mejor solución si se obtuvo un menor peso no asignado.
+
+Además, se cuentan los estados generados para medir el costo computacional del algoritmo.
+
+*/ 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import Clases.Camion;
-import Clases.Paquete;
+import src.Clases.Camion;
+import src.Clases.Paquete;
+import src.solucion.Solucion;
 
 public class Backtracking {
 
@@ -16,6 +33,7 @@ public class Backtracking {
         this.camiones = camiones;
         this.paquetes = paquetes;
         this.mejorSolucion = new Solucion();
+        this.mejorSolucion.setPesoNoAsignado(Integer.MAX_VALUE);
         this.estadosGenerados = 0;
     }
 

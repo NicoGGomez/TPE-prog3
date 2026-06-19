@@ -1,3 +1,4 @@
+package src.servicios;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -5,8 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import Clases.Camion;
-import Clases.Paquete;
+import src.Clases.Camion;
+import src.Clases.Paquete;
 
 public class Servicios {
     private HashMap<String, Camion> camiones = new HashMap<>();

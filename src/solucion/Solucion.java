@@ -1,19 +1,30 @@
+package src.solucion;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import Clases.Camion;
-import Clases.Paquete;
+import src.Clases.Camion;
+import src.Clases.Paquete;
 
 public class Solucion {
 
     private HashMap<Camion, ArrayList<Paquete>> asignaciones;
     private int pesoNoAsignado;
     private int estadosGenerados;
+    private int candidatosConsiderados;
 
     public Solucion() {
         this.asignaciones = new HashMap<>();
-        this.pesoNoAsignado = Integer.MAX_VALUE;
-        this.estadosGenerados = 0; 
+        this.pesoNoAsignado = 0;
+        this.estadosGenerados = 0;
+        this.candidatosConsiderados = 0;
+    }
+
+    public int getCandidatosConsiderados() {
+        return candidatosConsiderados;
+    }
+
+    public void setCandidatosConsiderados(int candidatosConsiderados) {
+        this.candidatosConsiderados = candidatosConsiderados;
     }
 
     public int getEstadosGenerados() {
@@ -40,6 +51,24 @@ public class Solucion {
         this.pesoNoAsignado = pesoNoAsignado;
     }
 
+    // @Override
+    // public String toString() {
+
+    //     String resultado = "Solución obtenida:\n";
+
+    //     for (Camion c : asignaciones.keySet()) {
+    //         resultado += c + " -> " + asignaciones.get(c) + "\n";
+    //     }
+
+    //     resultado += "\nPeso no asignado: "
+    //             + pesoNoAsignado + " kg";
+
+    //     resultado += "\nCantidad de estados generados: "
+    //             + estadosGenerados;
+
+    //     return resultado;
+    // }
+
     @Override
     public String toString() {
 
@@ -52,8 +81,15 @@ public class Solucion {
         resultado += "\nPeso no asignado: "
                 + pesoNoAsignado + " kg";
 
-        resultado += "\nCantidad de estados generados: "
-                + estadosGenerados;
+        if (estadosGenerados > 0) {
+            resultado += "\nCantidad de estados generados: "
+                    + estadosGenerados;
+        }
+
+        if (candidatosConsiderados > 0) {
+            resultado += "\nCantidad de candidatos considerados: "
+                    + candidatosConsiderados;
+        }
 
         return resultado;
     }
