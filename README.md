@@ -5,19 +5,30 @@ Este proyecto corresponde al Trabajo Práctico Evaluativo de la materia Programa
 Se implementan algoritmos de búsqueda como Backtracking y posibles heurísticas (Greedy), permitiendo analizar distintas soluciones y su costo computacional en términos de estados generados.
 
 🧱 Estructura del proyecto
-src/
- ├── algoritmos/
- │    ├── Backtracking.java
- │
- ├── Clases/
- │    ├── Camion.java
- │    ├── Paquete.java
- │
- ├── servicios/
- │    ├── Servicios.java
- |
- ├── solucion/
- │    ├── Solucion.java
+
+TPE-prog3/
+│
+├── src/
+│   ├── modelo/
+│   │    ├── Camion.java
+│   │    ├── Paquete.java
+│   │
+│   ├── algoritmos/
+│   │    ├── Backtracking.java
+│   │
+│   ├── solucion/
+│   │    ├── Solucion.java
+│   │
+│   ├── servicios/
+│   │    ├── Servicios.java
+│   │
+│   └── main/
+│        ├── Main.java
+│
+├── data/
+│   ├── csv/
+│
+├── README.md
 
 👨‍💻 Integrantes 
 Agustina Fennema 46094614
