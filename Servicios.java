@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import Clases.Camion;
+import Clases.Paquete;
+
 public class Servicios {
     private HashMap<String, Camion> camiones = new HashMap<>();
     private HashMap<String, Paquete> paquetes = new HashMap<>();

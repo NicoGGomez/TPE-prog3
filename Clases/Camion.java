@@ -1,3 +1,5 @@
+package Clases;
+
 public class Camion {
     private int id;
     private String patente;

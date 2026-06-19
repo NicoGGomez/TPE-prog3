@@ -1,3 +1,5 @@
+package Clases;
+
 public class Paquete {
     private int id;
     private String codigo;
