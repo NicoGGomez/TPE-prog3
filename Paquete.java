@@ -12,6 +12,17 @@ public class Paquete {
         this.contieneAlimentos = contieneAlimentos;
         this.urgencia = urgencia;
     }
+
+    @Override
+    public String toString() {
+        return "Paquete {\n" +
+                "\tid = " + id + "\n" +
+                "\tcodigo = '" + codigo + "'\n" +
+                "\tpeso = " + pesoKg + "\n" +
+                "\tcontieneAlimentos = " + contieneAlimentos + "\n" +
+                "\turgencia = " + urgencia + "\n" +
+                "}";
+    }
     
     public boolean getContieneAlimentos(){
         return contieneAlimentos;

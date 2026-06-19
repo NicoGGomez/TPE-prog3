@@ -57,8 +57,6 @@ public class Servicios {
     private void cargarPaquete(String path){
             try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
-            br.readLine();
-
             String linea;
             while ((linea = br.readLine()) != null) {
 
@@ -82,8 +80,6 @@ public class Servicios {
 
     private void cargarCamiones(String path){
             try (BufferedReader br = new BufferedReader(new FileReader(path))){
-
-            br.readLine();
 
             String linea;
             while ((linea = br.readLine()) != null) {
