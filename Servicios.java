@@ -12,7 +12,7 @@ public class Servicios {
     private HashMap<String, Camion> camiones = new HashMap<>();
     private HashMap<String, Paquete> paquetes = new HashMap<>();
 
-    // complejidad: O(c + p)
+    // complejidad: O(c + p) 
     public Servicios(String pathCamiones, String pathPaquetes){
         cargarInformacion(pathCamiones, pathPaquetes);
     }
@@ -22,7 +22,7 @@ public class Servicios {
         return paquetes.get(codigoPaquete);
     }
     
-    // complejidad: necesito inspeccionar todos los paquetes O(p)
+    // complejidad: necesito inspeccionar todos los paquetes O(p) -> O(n)
     public List<Paquete> servicio2(boolean contieneAlimentos) {
 
         List<Paquete> resultado = new ArrayList<>();
@@ -36,7 +36,7 @@ public class Servicios {
         return resultado;
     }
     
-    // complejidad: necesito verificar la urgencia de cada paquete O(p)
+    // complejidad: necesito verificar la urgencia de cada paquete O(p) -> O(n)
     public List<Paquete> servicio3(int urgenciaMinima, int urgenciaMaxima) {
 
         List<Paquete> resultado = new ArrayList<>();
